@@ -1,0 +1,18 @@
+// Platzieren Sie Ihre Einstellungen in dieser Datei, um Standard- und Benutzereinstellungen zu überschreiben.
+{
+  "editor.tabSize": 2,
+  // Control whether htmlhint is enabled for HTML files or not.
+    "htmlhint.enable": true,
+
+    // The htmlhint options object to provide args to the htmlhint command.
+    "htmlhint.options": {
+        "tagname-lowercase": true,
+        "attr-value-double-quotes": true,
+        "attr-no-duplication": true,
+        "tag-pair": true,
+        "spec-char-escape": true,
+        "id-unique": true,
+        "src-not-empty": true,
+        "title-require": true
+    }
+}
