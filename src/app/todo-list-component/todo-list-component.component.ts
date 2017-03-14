@@ -14,14 +14,13 @@ import { Component, Input } from '@angular/core';
           <li class="list-group-item">Porta ac consectetur ac</li>
           <li class="list-group-item">Vestibulum at eros</li>
         </ul>
-        Input: {{blogPost.title}}
     </div>
     
   `,
   styleUrls: ['./todo-list-component.component.css']
 })
 export class TodoListComponentComponent {
-  
+
   constructor() { }
 
 

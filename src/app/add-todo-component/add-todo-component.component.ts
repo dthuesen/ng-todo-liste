@@ -31,13 +31,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class AddTodoComponentComponent {
 
-  priorities = [ 'niedrig', 'mittel', 'hoch' ];
+  priorities = [ 'gering', 'normal', 'hoch' ];
   blogPost: {} = {
-    priority: 'niedrig',
+    priority: 'gering',
     title: ''
   };
-  
-  @Output() selectedPriority = new EventEmitter<string>();
 
   constructor() { }
 
