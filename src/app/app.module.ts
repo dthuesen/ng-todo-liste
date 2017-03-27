@@ -6,26 +6,26 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import { AddTodoComponentComponent } from './add-todo-component/add-todo-component.component';
-import { PanelComponent } from './panel.component';
-import { PanelContentComponent } from './panel-content.component';
-import { PanelTitleComponent } from './panel-title.component';
+import { CounterComponent } from './counter.component';
 import { TodoAddComponent } from './todo-add.component';
 import { TodoListComponentComponent } from './todo-list-component/todo-list-component.component';
+
+// MY OWN MODULES
+import { PanelModule } from './panel/panel.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CounterComponent,
     TodoAddComponent,
     TodoListComponentComponent,
     AddTodoComponentComponent,
-    PanelComponent,
-    PanelContentComponent,
-    PanelTitleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    PanelModule         // <-- the custom module must be imported!!!
   ],
   providers: [],
   bootstrap: [AppComponent]

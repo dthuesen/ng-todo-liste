@@ -1,2 +1,36 @@
 
-
+<div class="container">
+      <br>
+      <br>
+      <br>
+      <!-- START MY-PANEL -->
+      <my-panel>
+        <my-panel-title>
+          <h3 class="panel-title"><strong>To-Do</strong> Liste</h3>
+        </my-panel-title>
+        
+        <my-panel-content>
+          <my-counter></my-counter>
+          <h3>Subline text</h3>
+          <p>
+            Das hier ist die Liste der To-Dos:
+          </p>
+          <ul class="list-group">
+            <li
+              *ngFor="let todo of todos" 
+              class="list-group-item"
+              [class.list-group-item-success]="todo.priority == 'gering'"
+              [class.list-group-item-info]="todo.priority == 'normal'"
+              [class.list-group-item-danger]="todo.priority == 'hoch'"
+              [style.font-weight]="todo.priority == 'hoch' ? 'bold' : 'normal'"
+              [ngStyle]="getStyles(todo)" 
+            >
+            {{todo.title}} ({{todo.priority}})
+            </li>
+          </ul>  
+        </my-panel-content>
+      </my-panel>
+      <!-- END MY-PANEL -->
+      
+      <app-todo-add (onTodoAdd)="todos.push($event)"></app-todo-add>
+    </div>
