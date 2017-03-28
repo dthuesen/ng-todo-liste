@@ -10,7 +10,11 @@
         </my-panel-title>
         
         <my-panel-content>
-          <my-counter></my-counter>
+          <div *ngIf="isCounterVisible">
+            <my-counter></my-counter>
+          </div>
+          <button class="btn btn-xs btn-default" (click)="isCounterVisible = !isCounterVisible">Show/Hide Counter</button>
+
           <h3>Subline text</h3>
           <p>
             Das hier ist die Liste der To-Dos:

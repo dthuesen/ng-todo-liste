@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'my-counter',
@@ -8,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
     </p>
   `,
 })
-export class CounterComponent implements OnInit {
-  seconds: number = 0;
-  constructor() { }
+export class CounterComponent implements OnInit, OnDestroy {
+  seconds = 0;
 
-  ngOnInit() { }
+  secondsCount;
+
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.secondsCount = setInterval( () => {
+      console.log(this.seconds);
+      this.seconds = this.seconds + 1;
+    }, 1000);
+  }
+
+
+  ngOnDestroy() {
+    clearInterval(this.secondsCount);
+  }
+
+
 }

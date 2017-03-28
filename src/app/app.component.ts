@@ -9,6 +9,8 @@ import { CounterComponent } from './counter.component';
 })
 export class AppComponent {
 
+  isCounterVisible = true;
+
   todos = [
     new Todo('Angular 2 lernen', 'hoch'),
     new Todo('Pizza essen', 'gering')
