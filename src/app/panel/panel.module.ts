@@ -24,5 +24,4 @@ import { PanelTitleComponent } from './panel-title.component';
   ]
 })
 export class PanelModule {
-  
 }

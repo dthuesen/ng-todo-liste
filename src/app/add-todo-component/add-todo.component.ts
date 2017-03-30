@@ -27,9 +27,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
       </div>
     </div>
   `,
-  styleUrls: ['./add-todo-component.component.css']
+  styleUrls: ['./add-todo.component.css']
 })
-export class AddTodoComponentComponent {
+export class AddTodoComponent {
 
   priorities = [ 'gering', 'normal', 'hoch' ];
   blogPost: {} = {
